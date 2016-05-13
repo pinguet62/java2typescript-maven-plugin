@@ -58,6 +58,112 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
+
+			<!-- Fix: Failed to execute goal org.apache.maven.plugins:maven-plugin-plugin:3.2:descriptor -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>3.4</version>
+			</plugin>
+
+			<!-- Unit test -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<argLine>${surefireArgLine}</argLine>
+					<excludes>
+						<exclude>**/*ITTest.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<!-- Integration test -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<configuration>
+					<argLine>${failsafeArgLine}</argLine>
+					<includes>
+						<include>**/*ITTest.java</include>
+					</includes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>integration-test</id>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Code Coverage: Agent -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+				<configuration>
+					<excludes>
+						<exclude>fr/pinguet62/jsfring/gui/htmlunit/**/*.*</exclude>
+						<!-- Generated sources -->
+						<exclude>org/bson/types/QObjectId.class</exclude>
+						<exclude>fr/pinguet62/jsfring/model/**/Q*.class</exclude>
+						<!-- Fix -->
+						<exclude>**com.steadystate*</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<!-- Unit test -->
+					<execution>
+						<id>pre-unit-test</id>
+						<!-- Default: <phase>initialize</phase> -->
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<destFile>${session.executionRootDirectory}/target/jacoco.exec</destFile>
+							<propertyName>surefireArgLine</propertyName>
+						</configuration>
+					</execution>
+					<execution>
+						<id>post-unit-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<dataFile>${session.executionRootDirectory}/target/jacoco.exec</dataFile>
+							<outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
+						</configuration>
+					</execution>
+					<!-- Integration test -->
+					<execution>
+						<id>pre-integration-test</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<destFile>${session.executionRootDirectory}/target/jacoco-it.exec</destFile>
+							<propertyName>failsafeArgLine</propertyName>
+						</configuration>
+					</execution>
+					<execution>
+						<id>post-integration-test</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<dataFile>${session.executionRootDirectory}/target/jacoco-it.exec</dataFile>
+							<outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 

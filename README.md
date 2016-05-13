@@ -3,6 +3,11 @@
 [![Build Status](https://travis-ci.org/pinguet62/java2typescript-maven-plugin.svg?branch=master)](https://travis-ci.org/pinguet62/java2typescript-maven-plugin)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/fr.pinguet62/java2typescript-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/fr.pinguet62/java2typescript-maven-plugin)
 
+[![codecov.io](https://codecov.io/github/pinguet62/java2typescript-maven-plugin/coverage.svg?branch=master)](https://codecov.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/pinguet62/java2typescript-maven-plugin/badge.svg?branch=master)](https://coveralls.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
+
+[![Dependency Status](https://www.versioneye.com/user/projects/573627a5a0ca350034be7992/badge.svg?style=flat)](https://www.versioneye.com/user/projects/573627a5a0ca350034be7992)
+
 Generate your TypeScript from Java DTO classes.
 
 ## Example

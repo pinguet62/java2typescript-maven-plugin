@@ -3,15 +3,7 @@
 language: java
 jdk: oraclejdk8
 
-env:
-    global:
-        # Memory limit: 2Go
-        - export JAVA_OPTS=-Xmx1g
-
 before_install:
-    # VersionEye
-    # Disabled: - mvn versioneye:update
-    
     # Codecov.io: install
     - pip install --user codecov
 
