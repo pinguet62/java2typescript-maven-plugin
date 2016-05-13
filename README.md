@@ -1,5 +1,8 @@
 # Java to TypeScript (Maven plugin)
 
+[![Build Status](https://travis-ci.org/pinguet62/java2typescript-maven-plugin.svg?branch=master)](https://travis-ci.org/pinguet62/java2typescript-maven-plugin)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/fr.pinguet62/java2typescript-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/fr.pinguet62/java2typescript-maven-plugin)
+
 Generate your TypeScript from Java DTO classes.
 
 ## Example
@@ -63,7 +66,7 @@ export class MyDto {
 * Generic types
 * Dependency (but not checked)
 
-### Not supported
+### Not (yet) supported
 
 * Merge: generated file replace old
 * Methods: only attributes are parsed
@@ -71,20 +74,5 @@ export class MyDto {
 * Attribute initialization: convert only declarations
 * Advanced primitive types: `Map` is not supported
 * JSON field name using @annotation
-
-## Next version...
-
 * Multi-configuration: if you have several DTO packages
 * File path/name pattern: actually `{srcDir}/**Dto.java`
-
-___
-
-1. Convert Java file from source folder (not recursive) to target folder
-2. Recursive iteration
-3. Option: File **filter**  
-	Ex: srcDir = `/src/main/java/**.Dto.java`
-4. Option: Folder hierarchy  
-	srcDir = **`/path/to/src/`**  
-	Source file path: **`/path/to/src/`**`sub/folder/file.java`  
-	tgtDir = **`/other/path/to/tgt/`**  
-	Target file path: **`/other/path/to/tgt/`**`sub/folder/file.java`
