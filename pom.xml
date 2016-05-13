@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fr.pinguet62</groupId>
+	<groupId>com.github.pinguet62</groupId>
 	<artifactId>java2typescript-maven-plugin</artifactId>
 	<version>1.0</version>
 
