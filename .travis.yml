@@ -8,7 +8,7 @@ before_install:
     - pip install --user codecov
 
 # Override: add integration-test Maven phase
-script: # Default: `mvn test -B`
+install: # Default: `mvn test -B`
     - mvn -B verify
     
     # Site: generate

@@ -30,14 +30,17 @@ public final class TypeConverter implements Function<String, String> {
             NATIVES.put(java, "number");
         for (String java : asList("String", String.class.getName(), String.class.getSimpleName()))
             NATIVES.put(java, "string");
-        for (String java : asList(Iterable.class.getName(), Iterable.class.getSimpleName(), Collection.class.getName(), Collection.class.getSimpleName(), List.class.getName(), List.class.getSimpleName()))
+        for (String java : asList(Iterable.class.getName(), Iterable.class.getSimpleName(), Collection.class.getName(),
+                Collection.class.getSimpleName(), List.class.getName(), List.class.getSimpleName()))
             NATIVES.put(java, "Array");
     }
 
     /**
-     * @param The
-     *            Java type.<br>Full or short name.<br>Without generic arguments!
-     * @return The corresponding TypeScript type.<br>The same type for custom (for example DTO) types.
+     * @param java The Java type.<br>
+     *        Full or short name.<br>
+     *        Without generic arguments!
+     * @return The corresponding TypeScript type.<br>
+     *         The same type for custom (for example DTO) types.
      */
     @Override
     public String apply(String java) {
