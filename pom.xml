@@ -264,8 +264,8 @@
 	<!-- Sources -->
 	<scm>
 		<url>https://github.com/pinguet62/java2typescript-maven-plugin</url>
-		<connection>scm:git:ssh://git@github.com/pinguet62/java2typescript-maven-plugin.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/pinguet62/java2typescript-maven-plugin.git</developerConnection>
+		<connection>scm:git:git@github.com:pinguet62/java2typescript-maven-plugin.git</connection>
+		<developerConnection>scm:git:git@github.com:pinguet62/java2typescript-maven-plugin.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
 
