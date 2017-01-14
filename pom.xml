@@ -4,7 +4,7 @@
 
 	<groupId>com.github.pinguet62</groupId>
 	<artifactId>java2typescript-maven-plugin</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 
 	<packaging>maven-plugin</packaging>
 
@@ -266,7 +266,8 @@
 		<url>https://github.com/pinguet62/java2typescript-maven-plugin</url>
 		<connection>scm:git:ssh://git@github.com/pinguet62/java2typescript-maven-plugin.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/pinguet62/java2typescript-maven-plugin.git</developerConnection>
-	</scm>
+	  <tag>1.0</tag>
+  </scm>
 
 	<!-- Target repositories -->
 	<distributionManagement>
