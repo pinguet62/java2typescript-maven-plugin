@@ -15,17 +15,22 @@ public final class Import {
         this.fullClassName = fullClassName;
     }
 
-    /** The class name, without package. */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+        if (!obj.getClass().equals(getClass()))
+            return false;
+        Import other = (Import) obj;
+        return Objects.equal(fullClassName, other.fullClassName);
+    }
+
+    /** @return The class name, without package. */
     public String getClassName() {
         return from(fullClassName).extract("[^.]+$").toString();
     }
 
-    /** The package name, without class name. */
-    public String getPackage() {
-        return from(fullClassName).remove("[^.]+$").toString();
-    }
-
-    /** The full name, with package and class name. */
+    /** @return The full name, with package and class name. */
     public String getFullName() {
         return fullClassName;
     }
@@ -45,14 +50,9 @@ public final class Import {
         return "import {" + getClassName() + "} from '" + relativePath + "';";
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null)
-            return false;
-        if (!obj.getClass().equals(getClass()))
-            return false;
-        Import other = (Import) obj;
-        return Objects.equal(fullClassName, other.fullClassName);
+    /** @return The package name, without class name. */
+    public String getPackage() {
+        return from(fullClassName).remove("[^.]+$").toString();
     }
 
     @Override

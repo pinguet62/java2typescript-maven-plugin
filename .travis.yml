@@ -1,25 +1,15 @@
-# https://travis-ci.org/
+# https://travis-ci.org/pinguet62/java2typescript-maven-plugin
 
 language: java
 jdk: oraclejdk8
 
-before_install:
-    # Codecov.io: install
-    - pip install --user codecov
-
-# Override: add integration-test Maven phase
-install: # Default: `mvn test -B`
-    - mvn -B verify
-    
-    # Site: generate
-    # Disabled: - mvn site
-
-# Reporting
 after_success:
-    # JaCoCo: workaround: Maven `jacoco:report@post-integration-test` goal not working
-    - mvn verify -DskipTests -B
+    # Reports
+    # https://coveralls.io/github/pinguet62/java2typescript-maven-plugin
+    - mvn jacoco:report coveralls:report
+    # https://codecov.io/gh/pinguet62/java2typescript-maven-plugin
+    - bash <(curl -s https://codecov.io/bash)
     
-    # Coveralls.io: publish
-    - mvn coveralls:report
-    # Codecov.io: publish
-    - codecov
+    # Deploy SNAPSHOT
+    - echo '<settings><servers><server><id>ossrh</id><username>${env.OSSRH_USER}</username><password>${env.OSSRH_PASS}</password></server></servers></settings>' > deploy-settings.xml
+    - "[[ ${TRAVIS_PULL_REQUEST} == 'false' ]] && [[ ${TRAVIS_TAG} == '' ]] && mvn deploy -DskipTests -Dgpg.skip --settings deploy-settings.xml"

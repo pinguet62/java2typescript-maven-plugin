@@ -1,14 +1,13 @@
 # Java to TypeScript (Maven plugin)
 
+[![Dependency Status](https://www.versioneye.com/user/projects/5940500d368b0800700df470/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5940500d368b0800700df470)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/63e8913fa0654b1f9c3bcd9ac4f3abba)](https://www.codacy.com/app/pinguet62/java2typescript-maven-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pinguet62/java2typescript-maven-plugin&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/pinguet62/java2typescript-maven-plugin.svg?branch=master)](https://travis-ci.org/pinguet62/java2typescript-maven-plugin)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/fr.pinguet62/java2typescript-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/fr.pinguet62/java2typescript-maven-plugin)
-
 [![codecov.io](https://codecov.io/github/pinguet62/java2typescript-maven-plugin/coverage.svg?branch=master)](https://codecov.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/pinguet62/java2typescript-maven-plugin/badge.svg?branch=master)](https://coveralls.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin)
 
-[![Dependency Status](https://www.versioneye.com/user/projects/573627a5a0ca350034be7992/badge.svg?style=flat)](https://www.versioneye.com/user/projects/573627a5a0ca350034be7992)
-
-Generate your TypeScript from Java DTO classes.
+Generate your TypeScript DTO classes from Java DTO classes.
 
 ## Example
 
@@ -56,13 +55,11 @@ export class MyDto {
 * `srcDir`  
 	The Java DTO source folder
 	* Required: true
-	* Command line argument: `java2typescript.srcDir`  
-	Example: `mvn ... -Djava2typescript.srcDir=...`
+	* Command line argument: `java2typescript.srcDir` (ex: `mvn ... -Djava2typescript.srcDir=...`)
 * `tgtDir`  
 	The TypeScript DTO target folder (created if doesn't exist)
 	* Required: true
-	* Command line argument: `java2typescript.tgtDir`  
-		Example: `mvn ... -Djava2typescript.tgtDir=...`
+	* Command line argument: `java2typescript.tgtDir` (ex: `mvn ... -Djava2typescript.tgtDir=...`)
 
 ## Limitations
 

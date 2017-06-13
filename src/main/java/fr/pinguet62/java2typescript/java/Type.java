@@ -14,12 +14,12 @@ import fr.pinguet62.java2typescript.converter.TypeConverter;
 /** Composite pattern: {@link #dependency} not {@link Collection#isEmpty() empty} if generic class. */
 public final class Type {
 
-    private String name;
+    /** {@link Collection#isEmpty() Empty} for non-generic types. */
+    private List<Type> arguments = new ArrayList<>();
 
     private Import dependency;
 
-    /** {@link Collection#isEmpty() Empty} for non-generic types. */
-    private List<Type> arguments = new ArrayList<>();
+    private String name;
 
     public Type() {
         this("");
@@ -36,8 +36,18 @@ public final class Type {
         this.arguments = arguments;
     }
 
-    public List<Type> getGenericArguments() {
-        return arguments;
+    private String format(Function<Type, String> namingConverter) {
+        if (arguments.isEmpty())
+            return namingConverter.apply(this);
+
+        StringBuilder sb = new StringBuilder(namingConverter.apply(this)).append("<");
+        for (Iterator<Type> it = arguments.iterator(); it.hasNext();) {
+            Type child = it.next();
+            sb.append(child.format(namingConverter));
+            if (it.hasNext())
+                sb.append(", ");
+        }
+        return sb.append(">").toString();
     }
 
     public List<Import> getDependencies() {
@@ -47,6 +57,10 @@ public final class Type {
         arguments.stream().map(Type::getDependencies).forEach(dependencies::addAll);
         dependencies.removeIf(dep -> NATIVES.containsKey(dep.getFullName())); // TODO Best place
         return dependencies;
+    }
+
+    public List<Type> getGenericArguments() {
+        return arguments;
     }
 
     public String getName() {
@@ -60,11 +74,14 @@ public final class Type {
         return packagesName[packagesName.length - 1];
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /** Replace short class name to full name with package. */
+    /**
+     * Replace short class name to full name with package.
+     *
+     * @param currentPackage
+     *            {@link Package#getName()}
+     * @param imports
+     *            All {@code import}s.
+     */
     public void resolveImports(String currentPackage, List<Import> imports) {
         if (!name.contains(".")) {
             // imports.stream().filter(i -> i.getClassName().equals(name)).findAny().ifPresent(impor -> {
@@ -85,29 +102,19 @@ public final class Type {
         arguments.forEach(arg -> arg.resolveImports(currentPackage, imports));
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /** @see #name */
     @Override
     public String toString() {
         return format(t -> t.getShortName());
     }
 
-    /** @see #getShortName() */
+    /** @return {@link #getShortName()} */
     public String toTypeScript() {
         return format(t -> new TypeConverter().apply(t.getShortName()));
-    }
-
-    private String format(Function<Type, String> namingConverter) {
-        if (arguments.isEmpty())
-            return namingConverter.apply(this);
-
-        StringBuilder sb = new StringBuilder(namingConverter.apply(this)).append("<");
-        for (Iterator<Type> it = arguments.iterator(); it.hasNext();) {
-            Type child = it.next();
-            sb.append(child.format(namingConverter));
-            if (it.hasNext())
-                sb.append(", ");
-        }
-        return sb.append(">").toString();
     }
 
 }
