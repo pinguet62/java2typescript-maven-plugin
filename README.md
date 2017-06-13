@@ -19,23 +19,23 @@ import java.util.List;
 import fr.pinguet62.java2typescript.sample.dto.sub.OtherDto;
 
 public class MyDto {
-	private int id;
-	private List<String> codes;
-	private OtherDto other;
-	// getter & setter
+    private int id;
+    private List<String> codes;
+    private OtherDto other;
+    // getter & setter
 }
 ```
 
 Maven plugin:
 ```xml
 <plugin>
-	<groupId>fr.pinguet62</groupId>
-	<artifactId>java2typescript-maven-plugin</artifactId>
-	<version>...</version>
-	<configuration>
-		<srcDir>src/main/java/fr/pinguet62/java2typescript/sample/dto/</srcDir>
-		<tgtDir>src/main/webapp/app/dto/</tgtDir>
-	</configuration>
+    <groupId>fr.pinguet62</groupId>
+    <artifactId>java2typescript-maven-plugin</artifactId>
+    <version>...</version>
+    <configuration>
+        <srcDir>src/main/java/fr/pinguet62/java2typescript/sample/dto/</srcDir>
+        <tgtDir>src/main/webapp/app/dto/</tgtDir>
+    </configuration>
 </plugin>
 ```
 
@@ -44,22 +44,22 @@ Output: `src/main/webapp/app/dto/MyDto.ts`
 import {OtherDto} from './sub/OtherDto';
 
 export class MyDto {
-	id: number;
-	codes: Array<string>;
-	other: OtherDto;
+    id: number;
+    codes: Array<string>;
+    other: OtherDto;
 }
 ```
 
 ## Configuration
 
 * `srcDir`  
-	The Java DTO source folder
-	* Required: true
-	* Command line argument: `java2typescript.srcDir` (ex: `mvn ... -Djava2typescript.srcDir=...`)
+    The Java DTO source folder
+    * Required: true
+    * Command line argument: `java2typescript.srcDir` (ex: `mvn ... -Djava2typescript.srcDir=...`)
 * `tgtDir`  
-	The TypeScript DTO target folder (created if doesn't exist)
-	* Required: true
-	* Command line argument: `java2typescript.tgtDir` (ex: `mvn ... -Djava2typescript.tgtDir=...`)
+    The TypeScript DTO target folder (created if doesn't exist)
+    * Required: true
+    * Command line argument: `java2typescript.tgtDir` (ex: `mvn ... -Djava2typescript.tgtDir=...`)
 
 ## Limitations
 
