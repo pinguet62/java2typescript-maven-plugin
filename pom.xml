@@ -5,7 +5,12 @@
 
 	<groupId>com.github.pinguet62</groupId>
 	<artifactId>java2typescript-maven-plugin</artifactId>
+<<<<<<< HEAD
 	<version>1.1-SNAPSHOT</version>
+=======
+	<version>1.2-SNAPSHOT</version>
+
+>>>>>>> 669135231a520d6ace43171f54b5442f2c583d6a
 	<packaging>maven-plugin</packaging>
 
 	<name>Java2Typescript Maven plugin</name>
