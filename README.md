@@ -6,6 +6,7 @@
 [![codecov.io](https://codecov.io/github/pinguet62/java2typescript-maven-plugin/coverage.svg?branch=master)](https://codecov.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/pinguet62/java2typescript-maven-plugin/badge.svg?branch=master)](https://coveralls.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin)
+[![Javadocs](https://www.javadoc.io/badge/com.github.pinguet62/java2typescript-maven-plugin.svg)](https://www.javadoc.io/doc/com.github.pinguet62/java2typescript-maven-plugin)
 
 Generate your TypeScript DTO classes from Java DTO classes.
 
