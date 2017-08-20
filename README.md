@@ -31,7 +31,7 @@ public class MyDto {
 Maven plugin:
 ```xml
 <plugin>
-    <groupId>fr.pinguet62</groupId>
+    <groupId>com.github.pinguet62</groupId>
     <artifactId>java2typescript-maven-plugin</artifactId>
     <version>...</version>
     <configuration>
