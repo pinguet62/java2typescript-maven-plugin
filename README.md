@@ -1,5 +1,6 @@
 # Java to TypeScript (Maven plugin)
 
+![Not maintained](https://img.shields.io/badge/maintained%3F-no-red.svg?style=flat)
 [![Dependency Status](https://www.versioneye.com/user/projects/5940500d368b0800700df470/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5940500d368b0800700df470)
 [![Known Vulnerabilities](https://snyk.io/test/github/pinguet62/java2typescript-maven-plugin/badge.svg)](https://snyk.io/test/github/pinguet62/java2typescript-maven-plugin)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63e8913fa0654b1f9c3bcd9ac4f3abba)](https://www.codacy.com/app/pinguet62/java2typescript-maven-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pinguet62/java2typescript-maven-plugin&amp;utm_campaign=Badge_Grade)
