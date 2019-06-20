@@ -1,5 +1,10 @@
-**/.metadata/
-**/.settings/
-**/target/
-**/.classpath
-**/.project
+target
+
+# IntelliJ
+.idea
+
+# Eclipse
+.metadata
+.settings
+.classpath
+.project
