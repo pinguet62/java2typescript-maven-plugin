@@ -4,7 +4,7 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/5940500d368b0800700df470/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5940500d368b0800700df470)
 [![Known Vulnerabilities](https://snyk.io/test/github/pinguet62/java2typescript-maven-plugin/badge.svg)](https://snyk.io/test/github/pinguet62/java2typescript-maven-plugin)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/63e8913fa0654b1f9c3bcd9ac4f3abba)](https://www.codacy.com/app/pinguet62/java2typescript-maven-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pinguet62/java2typescript-maven-plugin&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.org/pinguet62/java2typescript-maven-plugin.svg?branch=master)](https://travis-ci.org/pinguet62/java2typescript-maven-plugin)
+[![GitHub Actions](https://github.com/pinguet62/java2typescript-maven-plugin/workflows/CI/badge.svg?branch=master)](https://github.com/pinguet62/java2typescript-maven-plugin/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov.io](https://codecov.io/github/pinguet62/java2typescript-maven-plugin/coverage.svg?branch=master)](https://codecov.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/pinguet62/java2typescript-maven-plugin/badge.svg?branch=master)](https://coveralls.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin)
