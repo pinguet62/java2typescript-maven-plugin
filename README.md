@@ -1,13 +1,14 @@
 # Java to TypeScript (Maven plugin)
 
-![Not maintained](https://img.shields.io/badge/maintained%3F-no-red.svg?style=flat)
-[![Dependency Status](https://www.versioneye.com/user/projects/5940500d368b0800700df470/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5940500d368b0800700df470)
-[![Known Vulnerabilities](https://snyk.io/test/github/pinguet62/java2typescript-maven-plugin/badge.svg)](https://snyk.io/test/github/pinguet62/java2typescript-maven-plugin)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/63e8913fa0654b1f9c3bcd9ac4f3abba)](https://www.codacy.com/app/pinguet62/java2typescript-maven-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pinguet62/java2typescript-maven-plugin&amp;utm_campaign=Badge_Grade)
+[![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/pinguet62/java2typescript-maven-plugin)](https://libraries.io/github/pinguet62/java2typescript-maven-plugin)
+[![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/pinguet62/java2typescript-maven-plugin)](https://snyk.io/test/github/pinguet62/java2typescript-maven-plugin)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/63e8913fa0654b1f9c3bcd9ac4f3abba)](https://www.codacy.com/manual/pinguet62/java2typescript-maven-plugin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pinguet62/java2typescript-maven-plugin&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/pinguet62/java2typescript-maven-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/pinguet62/java2typescript-maven-plugin)
+
 [![GitHub Actions](https://github.com/pinguet62/java2typescript-maven-plugin/workflows/CI/badge.svg?branch=master)](https://github.com/pinguet62/java2typescript-maven-plugin/actions?query=workflow%3ACI+branch%3Amaster)
-[![codecov.io](https://codecov.io/github/pinguet62/java2typescript-maven-plugin/coverage.svg?branch=master)](https://codecov.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/pinguet62/java2typescript-maven-plugin/badge.svg?branch=master)](https://coveralls.io/github/pinguet62/java2typescript-maven-plugin?branch=master)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin)
+
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.pinguet62/java2typescript-maven-plugin)](https://maven-badges.herokuapp.com/maven-central/com.github.pinguet62/java2typescript-maven-plugin)
 [![Javadocs](https://www.javadoc.io/badge/com.github.pinguet62/java2typescript-maven-plugin.svg)](https://www.javadoc.io/doc/com.github.pinguet62/java2typescript-maven-plugin)
 
 Generate your TypeScript DTO classes from Java DTO classes.
